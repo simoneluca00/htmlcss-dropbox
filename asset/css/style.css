@@ -3,4 +3,87 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
+
+html {scroll-behavior: smooth;}
+
+/* GENERALE */
+a {
+    text-decoration: none;
+}
+
+li > a:hover {
+    text-decoration: underline;
+}
+
+/* UTILITY */
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.float-l {
+    float: left;
+}
+
+.float-r {
+    float: right;
+}
+
+.bg-blue {
+    padding: 5px 10px;
+    background-color:#0061ff;
+    color: white;
+}
+
+.bg-blue:active {
+    filter: opacity(0.9);
+}
+
+/* HEADER - INTESTAZIONE */
+header {
+    width: 100%;
+    line-height: 70px;
+    position: fixed;
+    z-index: 1;
+}
+
+header .intestazione-sx,
+header .intestazione-dx {
+    width: 50%;
+}
+
+header .logo {
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+header nav {
+    display: inline-block;
+}
+
+header nav li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.intestazione-sx li {
+    margin-left: 35px;
+}
+
+.intestazione-dx li,
+.intestazione-dx .bg-blue {
+    margin-right: 35px;
+}
+
+.intestazione-dx {
+    text-align: right;
+}
+
+header nav li a {
+    color: black;
+}
+
+/* SEZIONE HERO */
