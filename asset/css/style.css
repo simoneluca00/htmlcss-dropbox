@@ -28,6 +28,10 @@ h3 {
     margin: 30px 0 30px 0;
 }
 
+span {
+    display: inline-block;
+}
+
 /* UTILITY */
 .clearfix::after {
     content: "";
@@ -36,7 +40,7 @@ h3 {
 }
 
 .centred-hr {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -56,6 +60,18 @@ h3 {
 
 .bg-blue:active {
     filter: opacity(0.9);
+}
+
+.f-gray {
+    color: gray;
+}
+
+.f-blue {
+    color: #0061ff;
+}
+
+.f-underline {
+    text-decoration: underline;
 }
 
 /* INTESTAZIONE - MENU ORIZZONTALE PRINCIPALE */
@@ -151,7 +167,7 @@ section.hero {
 }
 
 /* SEZIONE MEMBERSHIP */
-div.membership {
+section.membership {
     padding-top: 200px;
 }
 
@@ -173,13 +189,21 @@ div.radio-fatturazione label {
 }
 
 div.subscription {
-    width: calc((100% / 3) - 60px);
     border: 1px solid black;
+    margin-right: 30px;
+    width: calc(100% / 3 - 30px);
 }
 
 div.user-subscribe {
     border-bottom: 1px solid black;
-    padding: 15px 105px;
+}
+
+div.user-subscribe > p {
+    width: 50%;
+    max-width: 90%;
+    text-align: center;
+    margin: 15px auto;
+    font-size: 1.2em;
 }
 
 div.info-subscribe {
@@ -187,4 +211,58 @@ div.info-subscribe {
     margin: 0 auto;
 }
 
+div.info-subscribe h4:nth-of-type(2) {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
 
+span.monthly {
+    margin: 10px 0 50px 0;
+}
+
+div.feature-subscribe > div {
+    margin-bottom: 30px;
+}
+
+ #text-pencil,
+ .text-marker {
+     max-width: 90%;
+ }
+
+ .fa-pencil,
+ .fa-face-smile {
+     vertical-align: top;
+ }
+
+ .btn-subscribe {
+     width: 100%;
+     text-align: center;
+    margin: 60px auto;
+ }
+
+ .buy-now span {
+     padding-bottom: 30px;
+     margin-bottom: 50px;
+ }
+
+ .buy-now > span:first-child {
+     border-bottom: 1px solid gray;
+ }
+
+ div.info-subscribe li {
+     margin-bottom: 30px;
+     list-style-type: none;
+ }
+
+ div.subscription ul li:last-child {
+     margin-bottom: 90px;
+ }
+
+ div.btn-subscribe:first-child ul li:last-child {
+     margin-bottom: 138px;
+ }
+
+.fa-check {
+    vertical-align: top;
+    color: #0061ff;
+}
