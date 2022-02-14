@@ -14,8 +14,23 @@ a {
     color: black;
 }
 
+a.btn-subscribe,
+a.btn-subscribe-2 {
+    display: inline-block;
+}
+
 li > a:hover {
     text-decoration: underline;
+}
+
+h1::first-letter, 
+h2::first-letter, 
+h3::first-letter, 
+h4::first-letter, 
+h5::first-letter, 
+h6::first-letter,
+p::first-letter {
+    text-transform: uppercase;
 }
 
 h2 {
@@ -25,7 +40,7 @@ h2 {
 
 h3 {
     font-size: 1.6em;
-    margin: 30px 0 30px 0;
+    margin: 30px 0;
 }
 
 span {
@@ -42,6 +57,10 @@ span {
 .centred-hr {
     width: 80%;
     margin: 0 auto;
+}
+
+.d-inline {
+    display: inline;
 }
 
 .float-l {
@@ -72,6 +91,10 @@ span {
 
 .f-underline {
     text-decoration: underline;
+}
+
+.no-visibility {
+    visibility: hidden;
 }
 
 /* INTESTAZIONE - MENU ORIZZONTALE PRINCIPALE */
@@ -166,11 +189,14 @@ section.hero {
     width: 100%;
 }
 
-/* SEZIONE MEMBERSHIP */
+/* ----------------------- 
+SEZIONE MEMBERSHIP 
+-----------------------*/
 section.membership {
-    padding-top: 200px;
+    margin-top: 200px;
 }
 
+/* INPUT RADIO PER FATTURAZIONE */
 div.radio-fatturazione {
     margin-bottom: 30px;
 }
@@ -188,22 +214,22 @@ div.radio-fatturazione label {
     font-size: 1.2em;
 }
 
+/* TRE DIV FLOATTATI PER MODALITA' ISCRIZIONE */
 div.subscription {
-    border: 1px solid black;
-    margin-right: 30px;
-    width: calc(100% / 3 - 30px);
+    border: 1px solid lightgray;
+    width: calc(100% / 3 - 45px);
+    padding-bottom: 150px;
+}
+
+div.subscription.middle {
+    margin: 0 67px;
 }
 
 div.user-subscribe {
-    border-bottom: 1px solid black;
-}
-
-div.user-subscribe > p {
-    width: 50%;
-    max-width: 90%;
     text-align: center;
-    margin: 15px auto;
+    padding: 20px 0;
     font-size: 1.2em;
+    border-bottom: 1px solid lightgray;
 }
 
 div.info-subscribe {
@@ -224,7 +250,7 @@ div.feature-subscribe > div {
     margin-bottom: 30px;
 }
 
- #text-pencil,
+ .text-pencil,
  .text-marker {
      max-width: 90%;
  }
@@ -237,7 +263,8 @@ div.feature-subscribe > div {
  .btn-subscribe {
      width: 100%;
      text-align: center;
-    margin: 60px auto;
+     margin: 60px auto;
+     padding: 10px 15px;
  }
 
  .buy-now span {
@@ -250,19 +277,85 @@ div.feature-subscribe > div {
  }
 
  div.info-subscribe li {
-     margin-bottom: 30px;
+     padding-bottom: 30px;
      list-style-type: none;
- }
-
- div.subscription ul li:last-child {
-     margin-bottom: 90px;
- }
-
- div.btn-subscribe:first-child ul li:last-child {
-     margin-bottom: 138px;
  }
 
 .fa-check {
     vertical-align: top;
     color: #0061ff;
+}
+
+/* MODALITA' ISCRIZIONE ENTERPRISE */
+div.enterprise {
+    border: 1px solid lightgray;
+    margin-top: 50px;
+}
+
+.info-subscribe-2 {
+    width: 63%;
+}
+
+.button-enterprise {
+    width: 30%;
+    height: 100%;
+    padding: 30px 0 30px 0;
+    margin-right: 7%;
+    text-align: center;
+}
+
+.btn-subscribe-2 {
+    text-align: center;
+    padding: 10px 94px;
+}
+
+div.enterprise h3 {
+    padding-left: 30px;
+}
+
+.feature-enterprise {
+    margin: 30px 0;
+}
+
+div.enterprise h4,
+.feature-enterprise {
+    padding-left: 30px;
+}
+
+/* SOTTOSEZIONE PARTNERSHIP (di .membership) */
+div.partnership {
+    margin: 120px 0 100px 0;
+}
+
+div.img-partner {
+    width: 56%;
+}
+
+div.img-partner > img {
+    width: 100%;
+}
+
+div.text-partner {
+    width: 38%;
+    margin-left: 6%;
+}
+
+div.text-partner > h3 {
+    letter-spacing: 0.7px;
+    margin: 60px 0;
+}
+
+div.text-partner > p {
+    width: 88%;
+    margin-bottom: 40px;
+    line-height: 1.8em;
+}
+
+span.btn-partner {
+    padding: 7px 15px;
+    border: 1px solid black;
+}
+
+span.btn-partner:hover {
+    text-decoration: underline;
 }

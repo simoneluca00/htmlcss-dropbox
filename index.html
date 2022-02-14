@@ -55,7 +55,7 @@
                 </ul>
             </nav>
 
-            <a class="bg-blue" href="">
+            <a class="bg-blue d-inline" href="">
                 <span>Inizia</span>
             </a>
         </div>
@@ -75,8 +75,8 @@
                             Finalmente tutti i tuoi strumenti, contenuti e collaboratori sono accessibili dallo stesso posto. Dropbox Business &egrave; pi&ugrave; di uno spazio di archiviazione sicuro: &egrave; un modo intelligente e integrato per ottimizzare il flusso del lavoro esistente   
                         </p>
 
-                        <a href="">
-                            <span class="bg-blue">Inizia la tua prova gratuita</span>
+                        <a class="bg-blue" href="">
+                            <span>Inizia la tua prova gratuita</span>
                         </a>
 
                         <p>Annulla in qualsiasi momento</p>
@@ -102,11 +102,11 @@
 
                 <!-- TODO custom radio -->
                 <div class="radio-fatturazione">
-                    <input type="radio" name="fatturazione" value="FatturazioneAnnuale" checked required>
-                    <label for="FatturazioneAnnuale">Fatturazione Annuale</label>
+                    <input type="radio" id="fatturazione" value="FatturazioneAnnuale" checked required>
+                    <label for="fatturazione">Fatturazione Annuale</label>
 
-                    <input type="radio" name="fatturazione" value="FatturazioneMensile">
-                    <label for="FatturazioneMensile">Fatturazione Mensile</label>
+                    <input type="radio" id="fatturazione-2" value="FatturazioneMensile">
+                    <label for="fatturazione-2">Fatturazione Mensile</label>
                 </div>
 
                 <div class="clearfix">
@@ -144,16 +144,16 @@
 
                                 <div>
                                     <i class="fa-solid fa-pencil"></i>
-                                    <span id="text-pencil">
-                                        Funzioni di produttivit&agrave; premium e             condivisione file semplice e sicura
+                                    <span class="text-pencil">
+                                        Funzioni di produttivit&agrave; premium e condivisione file semplice e sicura
                                     </span> 
                                 </div>
                             </div>
 
-                            <a href="">
-                                <span class="bg-blue btn-subscribe">
-                                    Prova gratis per 30 giorni
+                            <a class="bg-blue btn-subscribe" href="">
                                 <span>
+                                    Prova gratis per 30 giorni
+                                </span>
                             </a>
 
                             <div class="buy-now">
@@ -203,11 +203,18 @@
                                     </span>
                                 </li>
 
+                                <li class="no-visibility">
+                                    <i class="fa-solid fa-check"></i>
+                                    <span class="text-marker ">
+                                        <!-- EVENTUALE TESTO ATTUALMENTE CON VISIBILITA' NASCOSTA -->
+                                    </span>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
 
-                    <div class="subscription float-l">
+                    <div class="subscription middle float-l">
 
                         <div class="user-subscribe">
                             <p>
@@ -239,16 +246,16 @@
 
                                 <div>
                                     <i class="fa-regular fa-face-smile"></i>
-                                    <span id="text-pencil">
-                                        Funzioni di produttivit&agrave; premium e             condivisione file semplice e sicura
+                                    <span class="text-pencil">
+                                        Funzioni di produttivit&agrave; premium e condivisione file semplice e sicura
                                     </span> 
                                 </div>
                             </div>
 
-                            <a href="">
-                                <span class="bg-blue btn-subscribe">
-                                    Prova gratis per 30 giorni
+                            <a class="bg-blue btn-subscribe" href="">
                                 <span>
+                                    Prova gratis per 30 giorni
+                                </span>
                             </a>
 
                             <div class="buy-now">
@@ -309,7 +316,7 @@
                         </div>
                     </div>
 
-                    <div class="subscription float-l">
+                    <div class="subscription float-r">
 
                         <div class="user-subscribe">
                             <p>
@@ -340,16 +347,16 @@
 
                                 <div>
                                     <i class="fa-solid fa-pencil"></i>
-                                    <span id="text-pencil">
-                                        Funzioni di produttivit&agrave; premium e             condivisione file semplice e sicura
+                                    <span class="text-pencil">
+                                        Funzioni di produttivit&agrave; premium e condivisione file semplice e sicura
                                     </span> 
                                 </div>
                             </div>
 
-                            <a href="">
-                                <span class="bg-blue btn-subscribe">
-                                    Prova gratis per 30 giorni
+                            <a class="bg-blue btn-subscribe" href="">
                                 <span>
+                                    Prova gratis per 30 giorni
+                                </span>
                             </a>
 
                             <div class="buy-now">
@@ -409,9 +416,50 @@
                             </ul>
                         </div>
                     </div>
-                    
+                </div>
+            
+                <div class="enterprise">
+
+                    <div class="user-subscribe">
+                        <p>
+                            <i class="fa-regular fa-building"></i>
+                            Team
+                        </p> 
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="info-subscribe-2 float-l">
+                            <h3>Enterprise</h3>
+                            <h4>Contatta l'ufficio vednite per i prezzi</h4>
+                            <p class="feature-enterprise">Soluzioni personalizzate su misura per aiutare i professionisti IT nella gestione su qualsiasi scala.</p>
+                        </div>  
+                        
+                        <div class="button-enterprise float-r">
+                            <a class="bg-blue btn-subscribe-2" href="">
+                                <span>
+                                    Contatta l'ufficio vendite
+                                </span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="partnership clearfix">
+                    <div class="img-partner float-l">
+                        <img src="./asset/img/partner.png" alt="">
+                    </div>
+
+                    <div class="text-partner float-r">
+                        <h3>Entra in contatto con un partner Dropbox</h3>
+                        <p>
+                            Trova un partner Dropbox e HelloSign di fiducia. Ottieni le soluzioni e i servizi necessari per raggiungere i tuoi obiettivi aziendali, tra cui implementazione, integrazione, gestione e supporto continui.
+                        </p>
+
+                        <a href="">
+                            <span class="btn-partner">Trova un partner</span>
+                        </a>
+                    </div>
+                </div>
 
             </div>
         </section>
