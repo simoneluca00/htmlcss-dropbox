@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="./asset/css/style.css">
     
     <title>Dropbox</title>
@@ -14,25 +14,51 @@
 <body>
 
     <!-- INTESTAZIONE - MENU ORIZZONTALE PRINCIPALE  -->
-    <!-- TODO inserire anchor link -->
     <header class="clearfix">
         <div class="intestazione-sx float-l">
             <a href="# ">
                 <img class="logo" src="./asset/img/logo-small.png" alt="logo Dropbox">
             </a>
-
+                <!--TODO OTTIMIZZARE IL DROPDOWN DELL'HEADER -->
             <nav aria-label="primary-pt1">
                 <ul>
-                    <li>
-                        <a href="">Perchè Dropbox?</a>
+                    <li class="visible-dd-content">
+                        <a href="#operations">Perchè Dropbox?</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                        </ul>
                     </li>
 
-                    <li>
-                        <a href="">Funzioni</a>
+                    <li class="visible-dd-content">
+                        <a href="#row-footer">Funzioni</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                        </ul>
                     </li>
 
-                    <li>
-                        <a href="">Piani e prezzi</a>
+                    <li class="visible-dd-content">
+                        <a href="#membership">Piani e prezzi</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem</a> 
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
@@ -41,21 +67,48 @@
         <div class="intestazione-dx float-r">
             <nav aria-label="primary-pt2">
                 <ul>
-                    <li>
-                        <a href="">Supporto</a>
+                    <li class="visible-dd-content">
+                        <a href="#faq">Supporto</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                        </ul>
                     </li>
 
-                    <li>
-                        <a href="">Contatta l'ufficio vendite</a>
+                    <li class="visible-dd-content">
+                        <a href="#">Contatta l'ufficio vendite</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                        </ul>
                     </li>
 
-                    <li>
-                        <a href="">Accedi</a>
+                    <li class="visible-dd-content">
+                        <a href="#">Accedi</a>
+
+                        <ul class="dropdown">
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                            <li class="hidden-dd-content">
+                                <a href="#">lorem </a> 
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>
 
-            <a class="bg-blue d-inline" href="">
+            <a class="bg-blue d-inline" href="#">
                 <span>Inizia</span>
             </a>
         </div>
@@ -99,8 +152,6 @@
 
                 <h2>Trova il piano Dropbox Business che fa per te</h2>
 
-
-                <!-- TODO custom radio -->
                 <div class="radio-fatturazione">
                     <input type="radio" name="fatturazione" id="fatturazione" checked required>
                     <label for="fatturazione">Fatturazione Annuale</label>
@@ -150,7 +201,7 @@
                                 </div>
                             </div>
 
-                            <a class="bg-blue btn-subscribe" href="">
+                            <a class="bg-blue btn-subscribe" href="#">
                                 <span>
                                     Prova gratis per 30 giorni
                                 </span>
@@ -158,7 +209,7 @@
 
                             <div class="buy-now">
                                 <span>oppure </span> 
-                                <a href="">
+                                <a href="#">
                                     <span class="f-blue f-underline">acquista ora</span>  
                                 </a>    
                             
@@ -167,46 +218,39 @@
                             <h4>Punti salienti del piano</h4>
 
                             <ul>
-                                <li>
-                                    <i class="fa-solid fa-check"></i>
+                                <li> 
                                     <span class="text-marker">
                                         Invia file fino a 100 GB con Dropbox Transfert
                                     </span>
-                                    
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Cartelle offline su dispositivi mobili
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Pulizia remota dell'account
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Filigrana documento
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Assistenza prioritaria via email e chat
                                     </span>
                                 </li>
 
                                 <li class="no-visibility">
-                                    <i class="fa-solid fa-check"></i>
-                                    <span class="text-marker ">
-                                        <!-- EVENTUALE TESTO ATTUALMENTE CON VISIBILITA' NASCOSTA -->
+                                    <span class="text-marker">
+                                        Assistenza prioritaria via email e chat
                                     </span>
                                 </li>
 
@@ -214,6 +258,8 @@
                         </div>
                     </div>
 
+
+                    <!-- PRIMO ABBONAMENTO TEAM -->
                     <div class="subscription middle float-l">
 
                         <div class="user-subscribe">
@@ -252,7 +298,7 @@
                                 </div>
                             </div>
 
-                            <a class="bg-blue btn-subscribe" href="">
+                            <a class="bg-blue btn-subscribe" href="#">
                                 <span>
                                     Prova gratis per 30 giorni
                                 </span>
@@ -260,7 +306,7 @@
 
                             <div class="buy-now">
                                 <span>oppure </span> 
-                                <a href="">
+                                <a href="#">
                                     <span class="f-blue f-underline">acquista ora</span>  
                                 </a>    
                             
@@ -270,7 +316,6 @@
 
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Invia file fino a 100 GB con Dropbox Transfert
                                     </span>
@@ -278,35 +323,30 @@
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Cartelle offline su dispositivi mobili
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Pulizia remota dell'account
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Filigrana documento
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Assistenza prioritaria via email e chat
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Assistenza prioritaria via email e chat
                                     </span>
@@ -316,6 +356,7 @@
                         </div>
                     </div>
 
+                    <!-- SECONDO ABBONAMENTO TEAM -->
                     <div class="subscription float-r">
 
                         <div class="user-subscribe">
@@ -353,7 +394,7 @@
                                 </div>
                             </div>
 
-                            <a class="bg-blue btn-subscribe" href="">
+                            <a class="bg-blue btn-subscribe" href="#">
                                 <span>
                                     Prova gratis per 30 giorni
                                 </span>
@@ -361,7 +402,7 @@
 
                             <div class="buy-now">
                                 <span>oppure </span> 
-                                <a href="">
+                                <a href="#">
                                     <span class="f-blue f-underline">acquista ora</span>  
                                 </a>    
                             
@@ -371,7 +412,6 @@
 
                             <ul>
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Invia file fino a 100 GB con Dropbox Transfert
                                     </span>
@@ -379,35 +419,30 @@
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Cartelle offline su dispositivi mobili
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Pulizia remota dell'account
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Filigrana documento
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Assistenza prioritaria via email e chat
                                     </span>
                                 </li>
 
                                 <li>
-                                    <i class="fa-solid fa-check"></i>
                                     <span class="text-marker">
                                         Assistenza prioritaria via email e chat
                                     </span>
@@ -435,7 +470,7 @@
                         </div>  
                         
                         <div class="button-enterprise float-r">
-                            <a class="bg-blue btn-subscribe-2" href="">
+                            <a class="bg-blue btn-subscribe-2" href="#">
                                 <span>
                                     Contatta l'ufficio vendite
                                 </span>
@@ -456,7 +491,7 @@
                             Trova un partner Dropbox e HelloSign di fiducia. Ottieni le soluzioni e i servizi necessari per raggiungere i tuoi obiettivi aziendali, tra cui implementazione, integrazione, gestione e supporto continui.
                         </p>
 
-                        <a href="">
+                        <a href="#client-companies">
                             <span class="bg-white">Trova un partner</span>
                         </a>
                     </div>
@@ -476,7 +511,7 @@
                         <h3>Passa di meno da uno strumento all'altro</h3>
                         <p>
                             Porta a termine le attivit&agrave; quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e 
-                            <a href="">
+                            <a href="#">
                                 <span class="f-underline">Dropbox Paper</span>
                             </a>
                             direttamente da Dropbox.
@@ -507,7 +542,7 @@
                         <h3>Passa di meno da uno strumento all'altro</h3>
                         <p>
                             Porta a termine le attivit&agrave; quotidiane con un solo strumento. Crea, modifica e condividi contenuti cloud da Documenti, Fogli e Presentazioni di Google, file Microsoft Office e 
-                            <a href="">
+                            <a href="#">
                                 <span class="f-underline">Dropbox Paper</span>
                             </a>
                             direttamente da Dropbox.
@@ -533,6 +568,7 @@
             </div>
         </section>
 
+        <!-- SEZIONE CLIENT COMPANIES -->
         <section id="client-companies">
 
             <div class="centred-hr">
@@ -540,11 +576,11 @@
                     utilizzano Dropbox Business
                 </h2>
 
-                <a href="">
+                <a href="#">
                     <span class="f-blue f-underline">Scopri di più sui nostri clienti</span>  
                 </a>   
             </div>
-<!-- ANCHOR - BONUS: CAMBIA LA COLONNA CENTRALE CON :active SU OGNI AZIENDA -->
+<!-- TODO - BONUS: CAMBIA LA COLONNA CENTRALE CON :active SU OGNI AZIENDA -->
             <div id="companies" class="clearfix">
                 <div class="col-companies clearfix float-l">
 
@@ -610,7 +646,7 @@
                     </div>
 
                     <div id="btn-business" class="float-l">
-                        <a href="">
+                        <a href="#membership">
                             <span>Inizia la tua prova gratuita</span>
                         </a>
                     </div>
@@ -619,6 +655,7 @@
 
         </section>
 
+        <!-- SEZIONE DOMANDE FREQUENTI -->
         <section id="faq">
             <div class="centred-hr">
                 <h2>Domande frequenti</h2>
@@ -685,23 +722,23 @@
 
                 <ul>
                     <li>
-                        <a href="">Applicazione desktop</a>                        
+                        <a href="#">Applicazione desktop</a>                        
                     </li>
 
                     <li>
-                        <a href="">Perchè Dropbox</a>
+                        <a href="#">Perchè Dropbox</a>
                     </li>
 
                     <li>
-                        <a href="">Piani</a>
+                        <a href="#">Piani</a>
                     </li>
 
                     <li>
-                        <a href="">Sicurezza</a>
+                        <a href="#">Sicurezza</a>
                     </li>
 
                     <li>
-                        <a href="">Funzioni</a>
+                        <a href="#">Funzioni</a>
                     </li>
 
                 </ul>
@@ -712,23 +749,23 @@
 
                 <ul>
                     <li>
-                        <a href="">Applicazione desktop</a>                        
+                        <a href="#">Applicazione desktop</a>                        
                     </li>
 
                     <li>
-                        <a href="">Perchè Dropbox</a>
+                        <a href="#">Perchè Dropbox</a>
                     </li>
 
                     <li>
-                        <a href="">Piani</a>
+                        <a href="#">Piani</a>
                     </li>
 
                     <li>
-                        <a href="">Sicurezza</a>
+                        <a href="#">Sicurezza</a>
                     </li>
 
                     <li>
-                        <a href="">Funzioni</a>
+                        <a href="#">Funzioni</a>
                     </li>
 
                 </ul>
@@ -739,23 +776,23 @@
 
                 <ul>
                     <li>
-                        <a href="">Applicazione desktop</a>                        
+                        <a href="#">Applicazione desktop</a>                        
                     </li>
 
                     <li>
-                        <a href="">Perchè Dropbox</a>
+                        <a href="#">Perchè Dropbox</a>
                     </li>
 
                     <li>
-                        <a href="">Piani</a>
+                        <a href="#">Piani</a>
                     </li>
 
                     <li>
-                        <a href="">Sicurezza</a>
+                        <a href="#">Sicurezza</a>
                     </li>
 
                     <li>
-                        <a href="">Funzioni</a>
+                        <a href="#">Funzioni</a>
                     </li>
 
                 </ul>
@@ -766,23 +803,23 @@
 
                 <ul>
                     <li>
-                        <a href="">Applicazione desktop</a>                        
+                        <a href="#">Applicazione desktop</a>                        
                     </li>
 
                     <li>
-                        <a href="">Perchè Dropbox</a>
+                        <a href="#">Perchè Dropbox</a>
                     </li>
 
                     <li>
-                        <a href="">Piani</a>
+                        <a href="#">Piani</a>
                     </li>
 
                     <li>
-                        <a href="">Sicurezza</a>
+                        <a href="#">Sicurezza</a>
                     </li>
 
                     <li>
-                        <a href="">Funzioni</a>
+                        <a href="#">Funzioni</a>
                     </li>
 
                 </ul>
@@ -793,15 +830,15 @@
 
                 <ul>
                     <li>
-                        <a href="">Applicazione desktop</a>                        
+                        <a href="#">Applicazione desktop</a>                        
                     </li>
 
                     <li>
-                        <a href="">Perchè Dropbox</a>
+                        <a href="#">Perchè Dropbox</a>
                     </li>
 
                     <li>
-                        <a href="">Piani</a>
+                        <a href="#">Piani</a>
                     </li>
                 </ul>
             </div>

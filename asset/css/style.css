@@ -6,17 +6,23 @@
     font-family: sans-serif;
 }
 
-html {scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 /* GENERALE */
 a {
     text-decoration: none;
-    color: black;
+    color: #000;
 }
 
 a.btn-subscribe,
 a.btn-subscribe-2 {
     display: inline-block;
+}
+
+li {
+    list-style-type: none;
 }
 
 li > a:hover {
@@ -57,6 +63,7 @@ span {
 .centred-hr {
     width: 80%;
     margin: 0 auto;
+    max-width: 1080px;
 }
 
 .d-inline {
@@ -113,12 +120,13 @@ header {
     background-color: white;
     width: 100%;
     min-width: 1175px;
-    line-height: 70px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     border-bottom: 1px solid gray;
+    /* padding: 23px 0; */
 }
 
 header .intestazione-sx,
@@ -133,20 +141,55 @@ header .logo {
 
 header nav {
     display: inline-block;
+    line-height: 70px;
 }
 
-header nav ul li {
-    list-style-type: none;
+li.visible-dd-content {
     display: inline-block;
 }
 
-.intestazione-sx li {
-    margin-left: 35px;
+.intestazione-sx li.visible-dd-content {
+    margin-left: 50px;
 }
 
-.intestazione-dx li,
+.intestazione-dx li.visible-dd-content,
 .intestazione-dx .bg-blue {
-    margin-right: 35px;
+    margin-right: 50px;
+}
+
+ul.dropdown {
+    visibility: hidden;
+    width: 150px;
+    position: absolute;
+    top: 70px;
+    background-color: white;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 6px;
+    transition: .3s;
+    opacity: 0;
+    text-align: left;
+}
+
+li.visible-dd-content {
+    position: relative;
+}
+
+li.visible-dd-content:hover ul.dropdown {
+    visibility: visible;
+    transition: .5s ease;
+    opacity: 1;
+    top: 55px;
+}
+
+li.visible-dd-content:hover li.hidden-dd-content {
+    padding: 10px;
+    line-height: 1.2em;
+}
+
+li.hidden-dd-content:hover {
+    box-shadow: inset 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
 }
 
 .intestazione-dx {
@@ -220,8 +263,8 @@ div.radio-fatturazione {
 div.radio-fatturazione input[type="radio"] {
     cursor: pointer;
     vertical-align: middle;
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 div.radio-fatturazione label {
@@ -234,7 +277,7 @@ div.radio-fatturazione label {
 div.subscription {
     border: 1px solid lightgray;
     width: calc(100% / 3 - 40px);
-    min-height: 1210px;
+    min-height: 1300px;
 }
 
 div.subscription li:last-child {
@@ -296,15 +339,21 @@ div.feature-subscribe > div {
      border-bottom: 1px solid gray;
  }
 
+div.info-subscribe ul {
+    padding-left: 10px;
+}
+
  div.info-subscribe li {
-     padding-bottom: 40px;
-     list-style-type: none;
+    padding-bottom: 40px;
+    list-style-type: none;
  }
 
-.fa-check {
-    vertical-align: top;
+ div.info-subscribe li::before {
+    content: "\f00c";
+    font-family: FontAwesome;
     color: #0061ff;
-}
+    vertical-align: top;
+ }
 
 /* MODALITA' ISCRIZIONE ENTERPRISE */
 div.enterprise {
@@ -313,24 +362,22 @@ div.enterprise {
 }
 
 .info-subscribe-2 {
-    width: 63%;
+    width: 67%;
+}
+
+div.enterprise h3 {
+    margin-bottom: 15px;
 }
 
 .button-enterprise {
     width: 30%;
-    height: 100%;
-    padding: 30px 0 30px 0;
-    margin-right: 7%;
+    margin: 30px 20px 120px 0; 
     text-align: center;
 }
 
 .btn-subscribe-2 {
     text-align: center;
-    padding: 10px 94px;
-}
-
-div.enterprise h3 {
-    padding-left: 30px;
+    padding: 10px 70px;
 }
 
 .feature-enterprise {
@@ -338,6 +385,7 @@ div.enterprise h3 {
 }
 
 div.enterprise h4,
+div.enterprise h3,
 .feature-enterprise {
     padding-left: 30px;
 }
@@ -348,16 +396,17 @@ div.partnership {
 }
 
 div.img-partner {
-    width: 56%;
+    width: 60%;
 }
 
 div.img-partner > img {
-    width: 100%;
+    max-width: 100%;
+    width: 90%;
 }
 
 div.text-partner {
     width: 38%;
-    margin-left: 6%;
+    margin-left: 2%;
 }
 
 div.text-partner > h3 {
@@ -375,11 +424,11 @@ div.text-partner > p {
     SEZIONE OPERAZIONI 
 ------------------------ */
 div.col-partner {
-    width: calc(100% / 3 - 30px);
+    width: calc(100% / 3 - 40px);
 }
 
 div.col-partner.middle {
-    margin: 0 45px;
+    margin: 0 60px;
 }
 
 div.col-partner > img {
@@ -390,8 +439,8 @@ div.col-partner > p {
     width: 80%;
 }
 
-div.row.second {
-    margin: 10% 0;
+div.row {
+    margin-bottom: 12%;
 }
 
 /* ---------------------------- 
@@ -401,67 +450,66 @@ div.row.second {
     margin-top: 50px;
 }
 
+/* INIZIO metodo alternativo: impostare width e height di col-companies a VW FISSO e con il calc() le dimensioni della colonna centrale --> poi a cascata definire le dimensioni dei div figli o con percentuali o la metà dei VW dei padri */
 div.col-companies {
     width: 30%;
+    height: 30vw;
 }
 
 div.zoom-company {
     background-color: #f5f5f5;
     width: 40%;
-    padding: 50.5px 20px;
-    max-height: 425.4px;
+    height: 30vw;
+    padding: 50px;
     overflow-y: auto;
 }
 
 div.logo-companies {
     width: 50%;
-    max-height: 212.5px;
+    height: 50%;
+    text-align: center;
+    line-height: 15vw;
 }
+/* ^^^^^^^FINE proprietà da modificare per il metodo alternativo------------------------------------------------------ ^^^^^^ */
 
 div.logo-companies > img {
     max-width: 100%;
+    width: 65%;
     filter: invert(1);
+    vertical-align: middle;
 }
 
 div#l-designit {
     background-color: #a2d39b;
     box-shadow: inset 0 0 0 10px #d0e9cd;
-    padding: 80px 35px;
 }
 
 div#l-arizona {
     background-color: #620c2e;
-    padding: 57px 50px;
 }
 
 div#l-florida {
     background-color: #0093ce;
-    padding: 90px 35px;
 }
 
 div#l-topps {
     background-color: #ff1c1c;
-    padding: 71px 40px;
 }
 
 div#l-bicycle {
     background-color: #d5001f;
-    padding: 78.5px 35px;
 }
 
 div#l-hearst {
     background-color: #b4d0e7;
-    padding: 94.7px 20px;
 }
 
 div#l-lonely-p {
     background-color: #0d2481;
-    padding: 61.2px 25px;
 }
 
 div#l-c-channel {
     background-color: #ffd830;
-    padding: 63px 50px;
 }
 
 div.zoom-company > img{
