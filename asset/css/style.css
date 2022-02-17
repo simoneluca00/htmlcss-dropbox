@@ -565,7 +565,7 @@ section#faq h2 {
 
 section#faq h4 {
     display: inline-block;
-    padding-right: 40%;
+    padding-right: 35%;
 }
 
 div.question {
@@ -580,8 +580,12 @@ div.hidden-answer {
     width: 80%;
 }
 
-.question:hover div.hidden-answer{
+.question:hover div.hidden-answer {
     display: block;
+}
+
+.question:hover .fa-chevron-down {
+    transform: rotateX(180deg);
 }
 
 /* -------------------------- 
